@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+ <!-- 1. start the Realsense435 -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+
+ <!-- 3. start the robot -->
+    <include file="$(find ur_robot_driver)/launch/ur5e_bringup.launch">
+        <arg name="robot_ip" value="192.168.56.101" />
+    </include>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find aruco_ros)/cfg/connect_ur5e_realsense.rviz" required="true" />
+
+</launch>

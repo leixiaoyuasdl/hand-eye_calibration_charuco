@@ -1,0 +1,14 @@
+<launch>
+
+   <!-- 2. start ArUco -->
+    <node name="moveit_ik_demo" pkg="aruco_ros" type="moveit_ik_demo">
+        <!-- /camera_info 和 /image 做修改 -->
+        <remap from="/camera_info" to="/camera/color/camera_info" />
+        <remap from="/image" to="/camera/color/image_raw" />
+        <param name="image_is_rectified" value="true"/>
+        <!-- reference_frame 和 amera_frame 做修改 -->
+        <param name="reference_frame"    value="base_link"/>
+        <param name="camera_frame"       value="camera_color_frame"/>
+    </node>
+</launch>
+
