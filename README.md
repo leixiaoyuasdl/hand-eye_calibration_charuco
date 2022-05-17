@@ -7,3 +7,4 @@ https://github.com/pal-robotics/aruco_ros
 ```
 roslaunch aruco_ros charuco.launch
 ```
+![22](https://user-images.githubusercontent.com/13638834/168721659-62059cc4-d69e-43fe-b3f9-106bc442d2fe.png)
